@@ -789,6 +789,7 @@
     <ClCompile Include="..\..\src\display.cpp" />
     <ClCompile Include="..\..\src\display_chat_manager.cpp" />
     <ClCompile Include="..\..\src\display_context.cpp" />
+    <ClCompile Include="..\..\src\drawing_queue.cpp" />
     <ClCompile Include="..\..\src\editor\action\action.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Editor\Action\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)Editor\Action\</ObjectFileName>
@@ -1524,6 +1525,12 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Debug|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Release|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="..\..\src\gui\dialogs\command_console.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Debug|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Release|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="..\..\src\gui\dialogs\core_selection.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
@@ -1703,6 +1710,12 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Debug|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Release|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gui\dialogs\game_ui.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Debug|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Release|Win32'">$(IntDir)Gui\Dialogs\</ObjectFileName>
     </ClCompile>
@@ -2507,6 +2520,18 @@
     <ClCompile Include="..\..\src\network_asio.cpp">
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
+    <ClCompile Include="..\..\src\ogl\context.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)OpenGL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)OpenGL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Debug|Win32'">$(IntDir)OpenGL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Release|Win32'">$(IntDir)OpenGL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ogl\utils.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)OpenGL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)OpenGL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Debug|Win32'">$(IntDir)OpenGL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Release|Win32'">$(IntDir)OpenGL\</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="..\..\src\pathfind\astarsearch.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Pathfind\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)Pathfind\</ObjectFileName>
@@ -2759,6 +2784,12 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)SDL\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)SDL\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)SDL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Debug|Win32'">$(IntDir)SDL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Release|Win32'">$(IntDir)SDL\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sdl\texture.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)SDL\</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)SDL\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Debug|Win32'">$(IntDir)SDL\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Release|Win32'">$(IntDir)SDL\</ObjectFileName>
     </ClCompile>
@@ -3539,6 +3570,7 @@
     <ClInclude Include="..\..\src\display.hpp" />
     <ClInclude Include="..\..\src\display_chat_manager.hpp" />
     <ClInclude Include="..\..\src\display_context.hpp" />
+    <ClInclude Include="..\..\src\drawing_queue.hpp" />
     <ClInclude Include="..\..\src\editor\action\action.hpp" />
     <ClInclude Include="..\..\src\editor\action\action_base.hpp" />
     <ClInclude Include="..\..\src\editor\action\action_item.hpp" />
@@ -3692,6 +3724,7 @@
     <ClInclude Include="..\..\src\gui\dialogs\campaign_difficulty.hpp" />
     <ClInclude Include="..\..\src\gui\dialogs\campaign_selection.hpp" />
     <ClInclude Include="..\..\src\gui\dialogs\chat_log.hpp" />
+    <ClInclude Include="..\..\src\gui\dialogs\command_console.hpp" />
     <ClInclude Include="..\..\src\gui\dialogs\core_selection.hpp" />
     <ClInclude Include="..\..\src\gui\dialogs\debug_clock.hpp" />
     <ClInclude Include="..\..\src\gui\dialogs\depcheck_confirm_change.hpp" />
@@ -3718,6 +3751,7 @@
     <ClInclude Include="..\..\src\gui\dialogs\game_load.hpp" />
     <ClInclude Include="..\..\src\gui\dialogs\game_save.hpp" />
     <ClInclude Include="..\..\src\gui\dialogs\game_stats.hpp" />
+    <ClInclude Include="..\..\src\gui\dialogs\game_ui.hpp" />
     <ClInclude Include="..\..\src\gui\dialogs\game_version.hpp" />
     <ClInclude Include="..\..\src\gui\dialogs\helper.hpp" />
     <ClInclude Include="..\..\src\gui\dialogs\help_browser.hpp" />
@@ -3861,6 +3895,8 @@
     <ClInclude Include="..\..\src\mt_rng.hpp" />
     <ClInclude Include="..\..\src\multiplayer_error_codes.hpp" />
     <ClInclude Include="..\..\src\network_asio.hpp" />
+    <ClInclude Include="..\..\src\ogl\context.hpp" />
+    <ClInclude Include="..\..\src\ogl\utils.hpp" />
     <ClInclude Include="..\..\src\overlay.hpp" />
     <ClInclude Include="..\..\src\pathfind\pathfind.hpp" />
     <ClInclude Include="..\..\src\pathfind\teleport.hpp" />
@@ -3921,6 +3957,7 @@
     <ClInclude Include="..\..\src\sdl\exception.hpp" />
     <ClInclude Include="..\..\src\sdl\rect.hpp" />
     <ClInclude Include="..\..\src\sdl\surface.hpp" />
+    <ClInclude Include="..\..\src\sdl\texture.hpp" />
     <ClInclude Include="..\..\src\sdl\utils.hpp" />
     <ClInclude Include="..\..\src\sdl\window.hpp" />
     <ClInclude Include="..\..\src\SDL_SavePNG\savepng.h" />
