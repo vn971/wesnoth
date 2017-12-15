@@ -167,12 +167,14 @@ function wesnoth.deprecation_message(elem_name, level, version, detail)
 		end
 	elseif level == 3 then
 		logger = function(msg) wesnoth.log("err", msg) end
-		message = wesnoth.format(_"$elem has been deprecated and will be removed in the next version.", message_params)
+		message_params.version = version
+		message = wesnoth.format(_"$elem has been deprecated and will be removed in the next version ($version).", message_params)
 	elseif level == 4 then
 		logger = error
 		message = wesnoth.format(_"$elem has been deprecated and removed.", message_params)
 	else
-		error(_"Invalid deprecation level (should be 1-4)")
+		local err_params = {level = level}
+		error(wesnoth.format(_"Invalid deprecation level $level (should be 1-4)", err_params))
 	end
 	if #detail > 0 then
 		logger(message .. "\n  " .. detail)
@@ -216,6 +218,11 @@ function wesnoth.deprecate_api(elem_name, replacement, level, version, elem, det
 				elem[key] = val
 			end,
 		}
+		-- TODO: Test if this works for deprecating a table that already had metafunctions
+		local old_mt = getmetatable(elem)
+		if type(old_mt) == "table" then
+			setmetatable(mt, old_mt)
+		end
 		return setmetatable({}, mt)
 	else
 		wesnoth.log('warn', "Attempted to deprecate something that is not a table or function: " ..
