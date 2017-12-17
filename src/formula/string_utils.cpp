@@ -19,11 +19,12 @@
 
 #include "config.hpp"
 #include "log.hpp"
-#include "formula/formula.hpp"
+//#include "formula/formula.hpp"
 #include "gettext.hpp"
 
 static lg::log_domain log_engine("engine");
 #define ERR_NG LOG_STREAM(err, log_engine)
+#define WRN_NG LOG_STREAM(warn, log_engine)
 
 static bool two_dots(char a, char b) { return a == '.' && b == '.'; }
 
@@ -109,6 +110,7 @@ static std::string do_interpolation(const std::string &str, const variable_set& 
 				// TODO: support escape sequences when/if they are allowed in FormulaAI strings
 				}
 			} while(++var_end != res.end() && paren_nesting_level > 0);
+#ifdef WESNOTH_GAME
 			if(paren_nesting_level > 0) {
 				ERR_NG << "Formula in WML string cannot be evaluated due to "
 					<< "a missing closing parenthesis:\n\t--> \""
@@ -125,6 +127,10 @@ static std::string do_interpolation(const std::string &str, const variable_set& 
 					<< e.formula << "\"\n";
 				res.replace(var_begin, var_end, "");
 			}
+#else
+			WRN_NG << "Formula substitution ignored (and removed) because WFL engine is not present in the server.\n";
+			res.replace(var_begin, var_end, "");
+#endif
 			continue;
 		}
 

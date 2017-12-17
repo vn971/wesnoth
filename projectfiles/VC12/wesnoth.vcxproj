@@ -744,7 +744,6 @@
     <ClCompile Include="..\..\src\controller_base.cpp" />
     <ClCompile Include="..\..\src\countdown_clock.cpp" />
     <ClCompile Include="..\..\src\cursor.cpp" />
-    <ClCompile Include="..\..\src\deprecation.cpp" />
     <ClCompile Include="..\..\src\desktop\clipboard.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Desktop\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)Desktop\</ObjectFileName>
@@ -1090,13 +1089,6 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Release|Win32'">$(IntDir)Formula\</ObjectFileName>
     </ClCompile>
     <ClCompile Include="..\..\src\formula\function_gamestate.cpp">
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Formula\</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)Formula\</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Formula\</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Debug|Win32'">$(IntDir)Formula\</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Test_Release|Win32'">$(IntDir)Formula\</ObjectFileName>
-    </ClCompile>
-    <ClCompile Include="..\..\src\formula\string_utils.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)Formula\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(IntDir)Formula\</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)Formula\</ObjectFileName>
@@ -3582,7 +3574,6 @@
     <ClInclude Include="..\..\src\controller_base.hpp" />
     <ClInclude Include="..\..\src\countdown_clock.hpp" />
     <ClInclude Include="..\..\src\cursor.hpp" />
-    <ClInclude Include="..\..\src\deprecation.hpp" />
     <ClInclude Include="..\..\src\desktop\clipboard.hpp" />
     <ClInclude Include="..\..\src\desktop\notifications.hpp" />
     <ClInclude Include="..\..\src\desktop\open.hpp" />
@@ -3658,7 +3649,6 @@
     <ClInclude Include="..\..\src\formula\formula_fwd.hpp" />
     <ClInclude Include="..\..\src\formula\function_gamestate.hpp" />
     <ClInclude Include="..\..\src\formula\function.hpp" />
-    <ClInclude Include="..\..\src\formula\string_utils.hpp" />
     <ClInclude Include="..\..\src\formula\tokenizer.hpp" />
     <ClInclude Include="..\..\src\formula\variant.hpp" />
     <ClInclude Include="..\..\src\formula\variant_value.hpp" />

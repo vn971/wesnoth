@@ -1322,9 +1322,6 @@
     <ClCompile Include="..\..\src\formula\function_gamestate.cpp">
       <Filter>Formula</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\formula\string_utils.cpp">
-      <Filter>Formula</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\formula\tokenizer.cpp">
       <Filter>Formula</Filter>
     </ClCompile>
@@ -1558,7 +1555,6 @@
     <ClCompile Include="..\..\src\gui\dialogs\multiplayer\player_list_helper.cpp">
       <Filter>Gui\Dialogs\Multiplayer</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\deprecation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\addon\client.hpp">
@@ -2743,9 +2739,6 @@
     <ClInclude Include="..\..\src\formula\function_gamestate.hpp">
       <Filter>Formula</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\formula\string_utils.hpp">
-      <Filter>Formula</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\formula\tokenizer.hpp">
       <Filter>Formula</Filter>
     </ClInclude>
@@ -3026,7 +3019,6 @@
     <ClInclude Include="..\..\src\gui\dialogs\multiplayer\player_list_helper.hpp">
       <Filter>Gui\Dialogs\Multiplayer</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\deprecation.hpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\src\tests\test_sdl_utils.hpp">

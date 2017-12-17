@@ -31,8 +31,7 @@ void deprecated_message(const std::string& elem_name, int level, const version_i
 		message = VGETTEXT("$elem has been deprecated indefinitely.", msg_params);
 	} else if(level == 2) {
 		log_ptr = &lg::warn();
-		version_info game_version(game_config::version);
-		if(game_version < version) {
+		if(game_config::wesnoth_version < version) {
 			msg_params["version"] = version.str();
 			message = VGETTEXT("$elem has been deprecated and may be removed in version $version.", msg_params);
 		} else {
